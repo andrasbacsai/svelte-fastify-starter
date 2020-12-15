@@ -1,0 +1,45 @@
+{
+  "name": "svelte-fastify-starter",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production node api",
+    "dev:server": "nodemon -w api api/server",
+    "dev": "run-p dev:routify dev:svite dev:server",
+    "dev:routify": "routify run",
+    "dev:svite": "svite",
+    "build": "run-s build:routify build:svite",
+    "build:routify": "routify run -b",
+    "build:svite": "svite build"
+  },
+  "dependencies": {
+    "@roxi/routify": "^2.7.3",
+    "cuid": "^2.1.8",
+    "dotenv": "^8.2.0",
+    "fastify": "^3.9.1",
+    "fastify-env": "^2.1.0",
+    "fastify-jwt": "^2.1.3",
+    "fastify-plugin": "^3.0.0",
+    "fastify-static": "^3.3.0",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.35",
+    "postcss-import": "^12.0.1",
+    "postcss-load-config": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "svelte": "^3.29.7",
+    "svelte-hmr": "^0.11.6",
+    "svelte-preprocess": "^4.6.1",
+    "svite": "latest",
+    "tailwindcss": "compat"
+  },
+  "keywords": [
+    "svelte",
+    "routify",
+    "fastify"
+  ],
+  "description": "Svelte (with Svite), Tailwind, Routify and Fastify backend starter template."
+}
