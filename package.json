@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=production node api",
+    "start": "NODE_ENV=production node api/server",
     "dev:server": "nodemon -w api api/server",
     "dev": "run-p dev:routify dev:svite dev:server",
     "dev:routify": "routify run",
